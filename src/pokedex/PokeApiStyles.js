@@ -100,7 +100,7 @@ export const InfoOrder = styled.div`
     padding: 2px;
     width: 70px;
     height: 25px;
-    left: 45px;
+    left: 40px;
     bottom: 69px;
     color: #333;
     font-family: 'Goldman', cursive;
