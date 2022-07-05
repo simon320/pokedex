@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const PokePageStyled = styled.main`
     width: 100vw;
@@ -154,32 +154,28 @@ export const LedBlue = styled.div`
     animation: ledBlue 2s infinite alternate;
 `
 
-export const LedRed = styled.div`
-    background: #700; 
+const led = css`
     position: absolute;
     top: 4px;
-    left: 156px; 
     width: 10px;
     height: 10px;
     border-radius: 50%;
+`
+
+export const LedRed = styled.div`
+    ${led}
+    background: #700; 
+    left: 156px; 
 `
 export const LedYellow = styled.div`
+    ${led}
     background: #770; 
-    position: absolute;
-    top: 4px;
     left: 172px; 
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
 `
 export const LedGreen = styled.div`
+    ${led}
     background: #070; 
-    position: absolute;
-    top: 4px;
     left: 187px; 
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
 `
 
 export const StatusBarContainerStyled = styled.div`
@@ -202,7 +198,7 @@ export const StatusBarLineStyled = styled.div`
   padding: 1px;
   background-color: #eeeeee;
   box-shadow: inset -1px -1px 1px #333,
-    inset 1px 1px 2px #333;
+                inset 1px 1px 2px #333;
   border: 1px solid #000;
   border-radius: 12px;
 `;

@@ -1,5 +1,12 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
+const ArrowButton = css`
+    background: #333;
+    position: absolute;
+    z-index: 35;
+    border: 2px solid #000;
+    border-radius: 25%;
+`
 
 export const BaseButton = styled.div`
     background: #211;
@@ -11,18 +18,10 @@ export const BaseButton = styled.div`
     height: 27px;
     left: 129px;
     top: 228px;
-
 `
 
 export const ArrowButtonLeft = styled.button`
-    background: #333;
-    position: absolute;
-    z-index: 35;
-    border: 2px solid #000;
-    border-radius: 25%;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 100;
+    ${ArrowButton}
     width: 23px;
     height: 20px;
     left: 117px;
@@ -35,14 +34,7 @@ export const ArrowButtonLeft = styled.button`
 `
 
 export const ArrowButtonRight = styled.button`
-    background: #333;
-    position: absolute;
-    z-index: 35;
-    border: 2px solid #000;
-    border-radius: 25%;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 100;
+    ${ArrowButton}
     width: 23px;
     height: 20px;
     left: 146px;
@@ -55,34 +47,19 @@ export const ArrowButtonRight = styled.button`
 `
 
 export const ArrowButtonUp = styled.button`
-    background: #333;
-    position: absolute;
-    z-index: 35;
-    border: 2px solid #000;
-    border-radius: 25%;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 100;
+    ${ArrowButton}
     width: 20px;
     height: 23px;
     left: 133px;
     top: 216px;
     clip-path: polygon(0 0, 100% 0, 100% 55%, 50% 100%, 0 55%);
 
-
     &:active {
         top: 215px;
     }
 `
 export const ArrowButtonDown = styled.button`
-    background: #333;
-    position: absolute;
-    z-index: 35;
-    border: 2px solid #000;
-    border-radius: 25%;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 100;
+    ${ArrowButton}
     width: 20px;
     height: 23px;
     left: 133px;
